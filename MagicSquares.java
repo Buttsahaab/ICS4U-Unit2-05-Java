@@ -48,10 +48,10 @@ final class MagicSquares {
     public static void genSquare(final int[] square, final int[] currentSquare,
                                  final int index) {
 
-        for (int i = 0; i < square.length; i++) {
-            if (currentSquare[i] == 0) {
-                square[index] = i + 1;
-                currentSquare[i] = 1;
+        for (int iterator = 0; iterator < square.length; iterator++) {
+            if (currentSquare[iterator] == 0) {
+                square[index] = iterator + 1;
+                currentSquare[iterator] = 1;
 
                 if (index < square.length - 1) {
                     genSquare(square, currentSquare, index + 1);
@@ -59,7 +59,7 @@ final class MagicSquares {
                     printMagicSquare(square);
                 }
 
-                currentSquare[i] = 0;
+                currentSquare[iterator] = 0;
             }
         }
 
